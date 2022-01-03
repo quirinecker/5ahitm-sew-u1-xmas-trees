@@ -8,10 +8,10 @@ import {BackendService} from "../shared/backend.service";
 })
 export class TreeComponent {
 
-    public selectedType: string | null;
+    public selectedType: string;
 
-    constructor(private readonly backend: BackendService) {
-        this.selectedType = null;
+    constructor() {
+        this.selectedType = 'Blaufichte';
     }
 
     typeSelectionChanged(type: string): void {

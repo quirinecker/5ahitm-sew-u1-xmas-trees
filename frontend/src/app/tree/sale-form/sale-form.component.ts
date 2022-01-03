@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-sale-form',
@@ -20,9 +21,12 @@ export class SaleFormComponent {
 
   hasUnitNumber = false;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+      private fb: FormBuilder,
+      private router: Router
+  ) {}
 
-  onSubmit(): void {
-    console.log(this.addressForm.value)
+  async onSubmit(): Promise<void> {
+    await this.router.navigate(['pay-pall'])
   }
 }

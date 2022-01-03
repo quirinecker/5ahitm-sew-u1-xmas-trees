@@ -1,4 +1,4 @@
-<mat-card *ngIf="tree != null">
+<mat-card *ngIf="tree != null && !tree.sold">
     <p>Tree #{{tree.id}} ({{tree.type}})</p>
     <ul>
         <li>Height: {{tree.heightMeters}}</li>

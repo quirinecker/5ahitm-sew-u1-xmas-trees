@@ -28,6 +28,7 @@ export class TreeDisplayComponent implements OnInit {
 
     public async ngOnInit(): Promise<void> {
         this.tree = await this.backendService.getTreeById(this.type, this.treeId);
+        this.tree.type = this.type
     }
 
     public get btnText(): string {
